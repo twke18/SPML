@@ -1,0 +1,66 @@
+---
+gpus: "GPUS"
+num_threads: 4
+dataset:
+  num_classes: 15
+  semantic_ignore_index: 255
+  dataset: Densepose
+  data_dir: "DATA_ROOT"
+  train_data_list: "TRAIN_DATA_LIST"
+  test_data_list: "TEST_DATA_LIST"
+  color_map_path: "misc/colormapvoc.mat"
+
+network:
+  pretrained: "PRETRAINED"
+  embedding_dim: EMBEDDING_DIM
+  label_divisor: LABEL_DIVISOR
+  use_syncbn: USE_SYNCBN
+  kmeans_iterations: KMEANS_ITERATIONS
+  kmeans_num_clusters:
+    - KMEANS_NUM_CLUSTERS
+    - KMEANS_NUM_CLUSTERS
+  backbone_types: BACKBONE_TYPES
+  prediction_types: PREDICTION_TYPES
+
+train:
+  resume: false
+  lr_policy: LR_POLICY
+  begin_iteration: 0
+  snapshot_step: SNAPSHOT_STEP
+  tensorboard_step: 100
+  max_iteration: MAX_ITERATION
+  random_mirror: true
+  random_scale: true
+  random_crop: true
+  warmup_iteration: WARMUP_ITERATION
+  base_lr: LR
+  weight_decay: WD
+  momentum: 0.9
+  batch_size: BATCH_SIZE
+  crop_size:
+    - TRAIN_CROP_SIZE
+    - TRAIN_CROP_SIZE
+  memory_bank_size: MEMORY_BANK_SIZE
+  sem_ann_concentration: SEM_ANN_CONCENTRATION
+  sem_occ_concentration: SEM_OCC_CONCENTRATION
+  img_sim_concentration: IMG_SIM_CONCENTRATION
+  feat_aff_concentration: FEAT_AFF_CONCENTRATION
+  sem_ann_loss_types: SEM_ANN_LOSS_TYPES
+  sem_occ_loss_types: SEM_OCC_LOSS_TYPES
+  img_sim_loss_types: IMG_SIM_LOSS_TYPES
+  feat_aff_loss_types: FEAT_AFF_LOSS_TYPES
+  sem_ann_loss_weight: SEM_ANN_LOSS_WEIGHT
+  sem_occ_loss_weight: SEM_OCC_LOSS_WEIGHT
+  img_sim_loss_weight: IMG_SIM_LOSS_WEIGHT
+  feat_aff_loss_weight: FEAT_AFF_LOSS_WEIGHT
+
+test:
+  scales:
+    - 1
+  image_size: TEST_IMAGE_SIZE
+  crop_size:
+    - TEST_CROP_SIZE_H
+    - TEST_CROP_SIZE_W
+  stride:
+    - TEST_STRIDE
+    - TEST_STRIDE
