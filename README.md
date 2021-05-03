@@ -3,18 +3,11 @@ By [Tsung-Wei Ke](https://www1.icsi.berkeley.edu/~twke/), [Jyh-Jing Hwang](https
 
 <img align="center" img src="misc/main.png" width="720">
 
-Weakly supervised segmentation is challenging as sparsely labeled pixels do not
-provide sufﬁcient supervision: A semantic segment may contain multiple distinc-
-tive regions whereas adjacent segments may appear similar. Common approaches
-use the few labeled pixels in all training images to train a segmentation model,
-and then propagate labels within each image based on visual or feature similarity.
-Instead, we treat segmentation as a semi-supervised pixel-wise metric learning
-problem, where pixels in different segments are mapped to distinctive features.
-Naturally, our unlabeled pixels participate not only in data-driven grouping within
-each image, but also in discriminative feature learning within and across images.
-Our results on Pascal VOC and DensePose datasets demonstrate our substantial
-accuracy gain on various forms of weak supervision including image-level tags,
-bounding boxes, labeled points, and scribbles.
+<img align="center" img src="misc/teaser.png" width="720">
+
+Weakly supervised segmentation requires assigning a label to every pixel based on training instances with partial annotations such as image-level tags, object bounding boxes, labeled points and scribbles. This task is challenging, as coarse annotations (tags, boxes) lack precise pixel localization whereas sparse annotations (points, scribbles) lack broad region coverage. Existing methods tackle these two types of weak supervision differently: Class activation maps are used to localize coarse labels and iteratively refine the segmentation model, whereas conditional random fields are used to propagate sparse labels to the entire image.
+
+We formulate weakly supervised segmentation as a semi-supervised metric learning problem, where pixels of the same (different) semantics need to be mapped to the same (distinctive) features. We propose 4 types of contrastive relationships between pixels and segments in the feature space, capturing low-level image similarity, semantic annotation, co-occurrence, and feature affinity They act as priors; the pixel-wise feature can be learned from training images with any partial annotations in a data-driven fashion. In particular, unlabeled pixels in training images participate not only in data-driven grouping within each image, but also in discriminative feature learning within and across images. We deliver a universal weakly supervised segmenter with significant gains on Pascal VOC and DensePose. 
 
 
 ## Code Base
@@ -144,9 +137,9 @@ If you find this code useful for your research, please consider citing our paper
 @inproceedings{ke2021spml,
   title={Universal Weakly Supervised Segmentation by Pixel-to-Segment Contrastive Learning},
   author={Ke, Tsung-Wei and Hwang, Jyh-Jing and Yu, Stella X},
-  booktitle={},
+  booktitle={International Conference on Learning Representations},
   pages={},
-  year={}
+  year={2021}
 }
 ```
 
