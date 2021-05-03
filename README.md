@@ -13,13 +13,13 @@ We formulate weakly supervised segmentation as a semi-supervised metric learning
 ## Code Base
 This release of code is based on [SegSort](https://github.com/jyhjinghwang/SegSort) in ICCV 2019.
 
-## Prerequisites
+### Prerequisites
 
 1. Linux
 2. Python3 (>=3.5)
 3. Cuda >= 9.2 and Cudnn >= 7.6
 
-## Required Python Packages
+### Required Python Packages
 
 1. pytorch >= 1.6
 2. numpy
@@ -82,10 +82,10 @@ This release of code is based on [SegSort](https://github.com/jyhjinghwang/SegSo
 ```
 
 
-## ImageNet Pre-Trained Models
+### ImageNet Pre-Trained Models
 We use the same ImageNet pretrained ResNet101 as [EMANet](https://github.com/XiaLiPKU/EMANet). You can download the pretrained models [here](https://drive.google.com/file/d/1I5WIu8jHQF-BksWiMrttiuNp1JnyRslh/view?usp=sharing) and put it under a new directory SPML/snapshots/imagenet/trained/. **Note: we do not use MSCOCO pretrained ResNet.**
 
-## Pascal VOC 2012 Trained Models.
+### Pascal VOC 2012 Trained Models.
 We provide the download links for our SPML models trained using image-level tag/bounding box/scribble/point annotations on PASCAL VOC, and summarize the performance as follows. **Note: we report the performance with denseCRF post-processing.**
 
 | Annotations   |      val      |     test      |
@@ -95,7 +95,7 @@ We provide the download links for our SPML models trained using image-level tag/
 | [Scribbles](https://drive.google.com/file/d/1uU7l9BWC2BaQQk50vp3tF-u72jM9iQJW/view?usp=sharing)  |     76.1      |      76.4        |
 | [Points](https://drive.google.com/file/d/1kgYItTXZS2p6vL4xHU1JEpspSbt0Lau6/view?usp=sharing)  |     73.2     |      74.0        |
 
-## DensePose Trained Models.
+### DensePose Trained Models.
 
 We provide the download link for our SPML models trained using point annotations on DensePose [here](https://drive.google.com/file/d/1NVBf0rQJjsLryNow7ne_wtKUHCR0nuFF/view?usp=sharing). We achieve 44.15% of mIoU on minival2014 set.
 
@@ -123,7 +123,7 @@ source bashscripts/voc12/train_spml_scribble.sh
 source bashscripts/voc12/train_spml_point.sh
 ```
 
-## DensePose
+### DensePose
 
 * SPML with points.
 ```
