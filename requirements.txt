@@ -1,0 +1,9 @@
+pytorch >= 1.6
+numpy
+scipy
+tqdm
+easydict == 1.9
+PyYAML
+PIL
+opencv
+pydensecrf
