@@ -83,21 +83,21 @@ This release of code is based on [SegSort](https://github.com/jyhjinghwang/SegSo
 
 
 ### ImageNet Pre-Trained Models
-We use the same ImageNet pretrained ResNet101 as [EMANet](https://github.com/XiaLiPKU/EMANet). You can download the pretrained models [here](https://drive.google.com/file/d/1I5WIu8jHQF-BksWiMrttiuNp1JnyRslh/view?usp=sharing) and put it under a new directory SPML/snapshots/imagenet/trained/. **Note: we do not use MSCOCO pretrained ResNet.**
+We use the same ImageNet pretrained ResNet101 as [EMANet](https://github.com/XiaLiPKU/EMANet). You can download the pretrained models [here](https://huggingface.co/twke/SPML/blob/main/resnet-101-cuhk.pth) and put it under a new directory SPML/snapshots/imagenet/trained/. **Note: we do not use MSCOCO pretrained ResNet.**
 
 ### Pascal VOC 2012 Trained Models.
 We provide the download links for our SPML models trained using image-level tag/bounding box/scribble/point annotations on PASCAL VOC, and summarize the performance as follows. **Note: we report the performance with denseCRF post-processing.**
 
 | Annotations   |      val      |     test      |
 | ------------- | ------------- | ------------- |
-|  [Image Tags](https://drive.google.com/file/d/1lLgpINx2vm1s2Gkq_S4TAg9tmUOvI0XL/view?usp=sharing)   |     69.5      |      71.6        |
-| [Bounding Box](https://drive.google.com/file/d/1uZBPKJRHXPBkNdALXfBoXLSwUmub8G0s/view?usp=sharing)  |     73.5      |      74.7        |
-| [Scribbles](https://drive.google.com/file/d/1uU7l9BWC2BaQQk50vp3tF-u72jM9iQJW/view?usp=sharing)  |     76.1      |      76.4        |
-| [Points](https://drive.google.com/file/d/1kgYItTXZS2p6vL4xHU1JEpspSbt0Lau6/view?usp=sharing)  |     73.2     |      74.0        |
+|  [Image Tags](https://huggingface.co/twke/SPML/blob/main/voc12_tag.zip)   |     69.5      |      71.6        |
+| [Bounding Box](https://huggingface.co/twke/SPML/blob/main/voc12_box.zip)  |     73.5      |      74.7        |
+| [Scribbles](https://huggingface.co/twke/SPML/blob/main/voc12_scribble.zip)  |     76.1      |      76.4        |
+| [Points](https://huggingface.co/twke/SPML/blob/main/voc12_point.zip)  |     73.2     |      74.0        |
 
 ### DensePose Trained Models.
 
-We provide the download link for our SPML models trained using point annotations on DensePose [here](https://drive.google.com/file/d/1NVBf0rQJjsLryNow7ne_wtKUHCR0nuFF/view?usp=sharing). We achieve 44.15% of mIoU on minival2014 set.
+We provide the download link for our SPML models trained using point annotations on DensePose [here](https://huggingface.co/twke/SPML/blob/main/densepose_point.zip). We achieve 44.15% of mIoU on minival2014 set.
 
 ## Bashscripts to Get Started
 
